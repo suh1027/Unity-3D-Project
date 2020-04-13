@@ -46,6 +46,9 @@ public class PlayerController : MonoBehaviour
     private Rigidbody myRigid;
     private CapsuleCollider capsuleCollider; //지면과 맞닿아 있을때만 점프가 가능하도록 사용
 
+    [SerializeField]
+    private GunController theGunController;
+
     void Start()
     {
         capsuleCollider = GetComponent<CapsuleCollider>();
@@ -53,6 +56,7 @@ public class PlayerController : MonoBehaviour
         appplySpeed = walkSpeed;
         originPosY = theCamera.transform.localPosition.y; //localPosition -> world기준이 아닌 player기준으로 position값을 받는것
         applyCrouchPosY = originPosY;
+        theGunController = FindObjectOfType<GunController>();
     }
 
     void Update()
@@ -111,7 +115,7 @@ public class PlayerController : MonoBehaviour
         int count = 0;
 
         while(_posY != applyCrouchPosY)
-        {
+        { 
             count++;
             //보간사용해서 자연스럽게 카메라 이동
             _posY = Mathf.Lerp(_posY, applyCrouchPosY, 0.3f);
@@ -180,6 +184,8 @@ public class PlayerController : MonoBehaviour
 
         if (isCrouch)
             Crouch(); //앉았을때 달리기 시도시에 앉은상태 해제
+
+        theGunController.CancelFineSight();
 
         isRun = true;
         appplySpeed = runSpeed;

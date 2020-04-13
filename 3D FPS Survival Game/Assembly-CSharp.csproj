@@ -63,6 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Gun.cs" />
+    <Compile Include="Assets\Scripts\GunController.cs" />
     <Compile Include="Assets\Scripts\Hand.cs" />
     <Compile Include="Assets\Scripts\HandController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />

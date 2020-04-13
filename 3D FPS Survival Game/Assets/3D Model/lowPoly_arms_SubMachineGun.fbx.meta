@@ -1,54 +1,164 @@
 fileFormatVersion: 2
 guid: 6241b9df205910040bff383d7060b423
 ModelImporter:
-  serializedVersion: 23
-  fileIDToRecycleName:
-    100000: Armature
-    100002: arms
-    100004: Cube
-    100006: Cube.001
-    100008: DownArm.L
-    100010: DownArm.L_end
-    100012: DownArm.R
-    100014: DownArm.R_end
-    100016: Gun
-    100018: Gun_end
-    100020: //RootNode
-    100022: Magazine
-    100024: Magazine_end
-    100026: UpArm.L
-    100028: UpArm.R
-    400000: Armature
-    400002: arms
-    400004: Cube
-    400006: Cube.001
-    400008: DownArm.L
-    400010: DownArm.L_end
-    400012: DownArm.R
-    400014: DownArm.R_end
-    400016: Gun
-    400018: Gun_end
-    400020: //RootNode
-    400022: Magazine
-    400024: Magazine_end
-    400026: UpArm.L
-    400028: UpArm.R
-    2100000: gun.002
-    2100002: Iron.001
-    2100004: Magazine.001
-    2100006: arm
-    2100008: skin
-    4300000: Cube
-    4300002: Cube.001
-    4300004: arms
-    7400000: Armature|ArmatureAction
-    9500000: //RootNode
-    13700000: arms
-    13700002: Cube
-    13700004: Cube.001
+  serializedVersion: 19300
+  internalIDToNameTable:
+  - first:
+      1: 100000
+    second: Armature
+  - first:
+      1: 100002
+    second: arms
+  - first:
+      1: 100004
+    second: Cube
+  - first:
+      1: 100006
+    second: Cube.001
+  - first:
+      1: 100008
+    second: DownArm.L
+  - first:
+      1: 100010
+    second: DownArm.L_end
+  - first:
+      1: 100012
+    second: DownArm.R
+  - first:
+      1: 100014
+    second: DownArm.R_end
+  - first:
+      1: 100016
+    second: Gun
+  - first:
+      1: 100018
+    second: Gun_end
+  - first:
+      1: 100020
+    second: //RootNode
+  - first:
+      1: 100022
+    second: Magazine
+  - first:
+      1: 100024
+    second: Magazine_end
+  - first:
+      1: 100026
+    second: UpArm.L
+  - first:
+      1: 100028
+    second: UpArm.R
+  - first:
+      4: 400000
+    second: Armature
+  - first:
+      4: 400002
+    second: arms
+  - first:
+      4: 400004
+    second: Cube
+  - first:
+      4: 400006
+    second: Cube.001
+  - first:
+      4: 400008
+    second: DownArm.L
+  - first:
+      4: 400010
+    second: DownArm.L_end
+  - first:
+      4: 400012
+    second: DownArm.R
+  - first:
+      4: 400014
+    second: DownArm.R_end
+  - first:
+      4: 400016
+    second: Gun
+  - first:
+      4: 400018
+    second: Gun_end
+  - first:
+      4: 400020
+    second: //RootNode
+  - first:
+      4: 400022
+    second: Magazine
+  - first:
+      4: 400024
+    second: Magazine_end
+  - first:
+      4: 400026
+    second: UpArm.L
+  - first:
+      4: 400028
+    second: UpArm.R
+  - first:
+      21: 2100000
+    second: gun.002
+  - first:
+      21: 2100002
+    second: Iron.001
+  - first:
+      21: 2100004
+    second: Magazine.001
+  - first:
+      21: 2100006
+    second: arm
+  - first:
+      21: 2100008
+    second: skin
+  - first:
+      43: 4300000
+    second: Cube
+  - first:
+      43: 4300002
+    second: Cube.001
+  - first:
+      43: 4300004
+    second: arms
+  - first:
+      74: 7400000
+    second: Gun_Idle
+  - first:
+      95: 9500000
+    second: //RootNode
+  - first:
+      137: 13700000
+    second: arms
+  - first:
+      137: 13700002
+    second: Cube
+  - first:
+      137: 13700004
+    second: Cube.001
+  - first:
+      74: -2984789672764718387
+    second: Gun0_Idle
+  - first:
+      74: -3695636905700427464
+    second: Gun0_Walk
+  - first:
+      74: -5082481207235378315
+    second: Gun0_Run
+  - first:
+      74: 1161983286464175395
+    second: Gun0_Reload
+  - first:
+      74: -2899781961897648766
+    second: Gun0_Weapon_Out
+  - first:
+      74: -208617989681022745
+    second: Gun0_Weapon_In
+  - first:
+      74: 7276754366007499447
+    second: Gun0_Item
+  - first:
+      74: -2727370266451314378
+    second: Gun0_FineSight
   externalObjects: {}
   materials:
-    importMaterials: 1
+    materialImportMode: 1
     materialName: 0
     materialSearch: 1
     materialLocation: 1
@@ -73,7 +183,239 @@ ModelImporter:
     animationWrapMode: 0
     extraExposedTransformPaths: []
     extraUserProperties: []
-    clipAnimations: []
+    clipAnimations:
+    - serializedVersion: 16
+      name: Gun0_Idle
+      takeName: Armature|ArmatureAction
+      internalID: 0
+      firstFrame: 0
+      lastFrame: 24
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Gun0_Walk
+      takeName: Armature|ArmatureAction
+      internalID: 0
+      firstFrame: 30
+      lastFrame: 54
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Gun0_Run
+      takeName: Armature|ArmatureAction
+      internalID: 0
+      firstFrame: 60
+      lastFrame: 70
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Gun0_Reload
+      takeName: Armature|ArmatureAction
+      internalID: 0
+      firstFrame: 90
+      lastFrame: 140
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Gun0_Weapon_Out
+      takeName: Armature|ArmatureAction
+      internalID: 0
+      firstFrame: 210
+      lastFrame: 220
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Gun0_Weapon_In
+      takeName: Armature|ArmatureAction
+      internalID: 0
+      firstFrame: 220
+      lastFrame: 230
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Gun0_Item
+      takeName: Armature|ArmatureAction
+      internalID: 0
+      firstFrame: 240
+      lastFrame: 250
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
+    - serializedVersion: 16
+      name: Gun0_FineSight
+      takeName: Armature|ArmatureAction
+      internalID: 0
+      firstFrame: 180
+      lastFrame: 190
+      wrapMode: 0
+      orientationOffsetY: 0
+      level: 0
+      cycleOffset: 0
+      loop: 0
+      hasAdditiveReferencePose: 0
+      loopTime: 0
+      loopBlend: 0
+      loopBlendOrientation: 0
+      loopBlendPositionY: 0
+      loopBlendPositionXZ: 0
+      keepOriginalOrientation: 0
+      keepOriginalPositionY: 1
+      keepOriginalPositionXZ: 0
+      heightFromFeet: 0
+      mirror: 0
+      bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
+      curves: []
+      events: []
+      transformMask: []
+      maskType: 3
+      maskSource: {instanceID: 0}
+      additiveReferencePoseFrame: 0
     isReadable: 0
   meshes:
     lODScreenPercentages: []
@@ -81,6 +423,7 @@ ModelImporter:
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
+    sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
     importCameras: 1
@@ -88,18 +431,19 @@ ModelImporter:
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    optimizeMeshForGPU: 1
     keepQuads: 0
     weldVertices: 1
     preserveHierarchy: 0
+    skinWeightsMode: 0
+    maxBonesPerVertex: 4
+    minBoneWeight: 0.001
+    meshOptimizationFlags: -1
     indexFormat: 0
     secondaryUVAngleDistortion: 8
     secondaryUVAreaDistortion: 15.000001
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.01
-    hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
     normalImportMode: 0
@@ -108,10 +452,10 @@ ModelImporter:
     legacyComputeAllNormalsFromSmoothingGroupsWhenMeshHasBlendShapes: 0
     blendShapeNormalImportMode: 1
     normalSmoothingSource: 0
+  referencedClips: []
   importAnimation: 1
-  copyAvatar: 0
   humanDescription:
-    serializedVersion: 2
+    serializedVersion: 3
     human: []
     skeleton: []
     armTwist: 0.5
@@ -121,13 +465,16 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
   lastHumanDescriptionAvatarSource: {instanceID: 0}
+  autoGenerateAvatarMappingIfUnspecified: 1
   animationType: 2
   humanoidOversampling: 1
+  avatarSetup: 1
   additionalBone: 0
   userData: 
   assetBundleName: 
