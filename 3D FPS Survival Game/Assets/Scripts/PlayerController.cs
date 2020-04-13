@@ -242,7 +242,7 @@ public class PlayerController : MonoBehaviour
         Vector3 _characterRotationY = new Vector3(0f, _yRotation, 0f) * lookSensitivity;
         myRigid.MoveRotation(myRigid.rotation * Quaternion.Euler(_characterRotationY)); //Quaternion.Euler -> rotation으로!
 
-        Debug.Log(myRigid.rotation);
-        Debug.Log(myRigid.rotation.eulerAngles); //Quaternion 값
+        //Debug.Log(myRigid.rotation);
+        //Debug.Log(myRigid.rotation.eulerAngles); //Quaternion 값
     }
 }

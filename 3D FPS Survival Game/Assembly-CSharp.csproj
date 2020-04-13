@@ -63,61 +63,63 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Hand.cs" />
+    <Compile Include="Assets\Scripts\HandController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <None Include="Assets\Water Shader\Water_Shader.shader" />
     <Reference Include="Unity.Timeline.Editor">
-      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D FPS Survival Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
+      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D Project/Unity-3D-Project/3D FPS Survival Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Editor">
-      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D FPS Survival Game/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
+      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D Project/Unity-3D-Project/3D FPS Survival Game/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.VSCode.Editor">
-      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D FPS Survival Game/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
+      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D Project/Unity-3D-Project/3D FPS Survival Game/Library/ScriptAssemblies/Unity.VSCode.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro.Editor">
-      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D FPS Survival Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
+      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D Project/Unity-3D-Project/3D FPS Survival Game/Library/ScriptAssemblies/Unity.TextMeshPro.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.UI">
-      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D FPS Survival Game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
+      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D Project/Unity-3D-Project/3D FPS Survival Game/Library/ScriptAssemblies/UnityEngine.UI.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Timeline">
-      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D FPS Survival Game/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
+      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D Project/Unity-3D-Project/3D FPS Survival Game/Library/ScriptAssemblies/Unity.Timeline.dll</HintPath>
     </Reference>
     <Reference Include="Unity.CollabProxy.Editor">
-      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D FPS Survival Game/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
+      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D Project/Unity-3D-Project/3D FPS Survival Game/Library/ScriptAssemblies/Unity.CollabProxy.Editor.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-weaver.Editor">
-      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D FPS Survival Game/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
+      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D Project/Unity-3D-Project/3D FPS Survival Game/Library/ScriptAssemblies/com.unity.multiplayer-weaver.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.XR.LegacyInputHelpers">
-      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D FPS Survival Game/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D Project/Unity-3D-Project/3D FPS Survival Game/Library/ScriptAssemblies/UnityEngine.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="Unity.Rider.Editor">
-      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D FPS Survival Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
+      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D Project/Unity-3D-Project/3D FPS Survival Game/Library/ScriptAssemblies/Unity.Rider.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Sprite.Editor">
-      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D FPS Survival Game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
+      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D Project/Unity-3D-Project/3D FPS Survival Game/Library/ScriptAssemblies/Unity.2D.Sprite.Editor.dll</HintPath>
     </Reference>
     <Reference Include="Unity.2D.Tilemap.Editor">
-      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D FPS Survival Game/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
+      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D Project/Unity-3D-Project/3D FPS Survival Game/Library/ScriptAssemblies/Unity.2D.Tilemap.Editor.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.SpatialTracking">
-      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D FPS Survival Game/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
+      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D Project/Unity-3D-Project/3D FPS Survival Game/Library/ScriptAssemblies/UnityEditor.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.SpatialTracking">
-      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D FPS Survival Game/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
+      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D Project/Unity-3D-Project/3D FPS Survival Game/Library/ScriptAssemblies/UnityEngine.SpatialTracking.dll</HintPath>
     </Reference>
     <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D FPS Survival Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
+      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D Project/Unity-3D-Project/3D FPS Survival Game/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.XR.LegacyInputHelpers">
-      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D FPS Survival Game/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
+      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D Project/Unity-3D-Project/3D FPS Survival Game/Library/ScriptAssemblies/UnityEditor.XR.LegacyInputHelpers.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
-      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D FPS Survival Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
+      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D Project/Unity-3D-Project/3D FPS Survival Game/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
     <Reference Include="com.unity.multiplayer-hlapi.Runtime">
-      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D FPS Survival Game/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
+      <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D Project/Unity-3D-Project/3D FPS Survival Game/Library/ScriptAssemblies/com.unity.multiplayer-hlapi.Runtime.dll</HintPath>
     </Reference>
     <Reference Include="UnityEngine.AIModule">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.3.9f1/Editor/Data/Managed/UnityEngine/UnityEngine.AIModule.dll</HintPath>
