@@ -11746,6 +11746,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2bb477efd8a61eb4e88676d7131815c1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  closeWeaponName: 
+  isHand: 0
+  isAxe: 0
+  isPickAxe: 0
   handName: "\uB9E8\uC190"
   range: 3
   damage: 1

@@ -29,12 +29,12 @@ public class WeaponManager : MonoBehaviour
     [SerializeField]
     private Gun[] guns;
     [SerializeField]
-    private Hand[] hands;
+    private CloseWeapon[] hands;
 
     // Key Value 로 관리
     // 관리 차원에서 무기접근이 쉽게 가능하도록 만듬
     private Dictionary<string, Gun> gunDictionary = new Dictionary<string, Gun>();
-    private Dictionary<string, Hand> handDictionary = new Dictionary<string, Hand>();
+    private Dictionary<string, CloseWeapon> handDictionary = new Dictionary<string, CloseWeapon>();
 
     [SerializeField]
     private GunController theGunController;
@@ -113,7 +113,7 @@ public class WeaponManager : MonoBehaviour
         if(_type == "GUN")
             theGunController.GunChange(gunDictionary[_name]);
         else if(_type == "HAND")
-            theHandController.HandChange(handDictionary[_name]);
+            theHandController.CloseWeaponChange(handDictionary[_name]);
 
     }
 }
