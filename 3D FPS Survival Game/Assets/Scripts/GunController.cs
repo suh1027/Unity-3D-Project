@@ -28,17 +28,22 @@ public class GunController : MonoBehaviour
     // 크로스헤어를 위한 카메라 정보
     [SerializeField]
     private Camera theCam;
+    private CrossHair theCrossHair;
+
 
     // 피격 이펙트
     [SerializeField]
     private GameObject hit_effect_prefab;
+
+   
 
 
 
     void Start()
     {
         originPos = Vector3.zero;
-        audioSource = GetComponent<AudioSource>();    
+        audioSource = GetComponent<AudioSource>();
+        theCrossHair = FindObjectOfType<CrossHair>();
     }
 
     // Update is called once per frame
@@ -93,8 +98,11 @@ public class GunController : MonoBehaviour
     }
     private void Shoot()
     {
+        // 크로스헤어 애니메이션 
+        theCrossHair.FireAnimation();
+        
         //Debug.Log("총알 발사함");
-
+        
         //연사속도 재계산
         currentFireRate = currentGun.fireRate;
 
@@ -118,10 +126,14 @@ public class GunController : MonoBehaviour
 
     }
 
-    private void Hit()
+    private void Hit() // 적중되는 위치
     {
         if(Physics.Raycast(theCam.transform.position, 
-            theCam.transform.forward, 
+            theCam.transform.forward +  
+            new Vector3(
+            Random.Range(-theCrossHair.GetAccuracy() - currentGun.accuracy, theCrossHair.GetAccuracy() - currentGun.accuracy),
+            Random.Range(-theCrossHair.GetAccuracy() - currentGun.accuracy, theCrossHair.GetAccuracy() - currentGun.accuracy), // Random.Range를 통해 반동 구현
+            0), // 랜덤하게 수치 변화 
             out hitInfo, 
             currentGun.range))
         {
@@ -284,6 +296,7 @@ public class GunController : MonoBehaviour
     {
         isFineSightMode = !isFineSightMode;
         currentGun.animator.SetBool("FineSightMode", isFineSightMode);
+        theCrossHair.FineSightAnimation(isFineSightMode);
 
         if (isFineSightMode)
         {
@@ -334,5 +347,15 @@ public class GunController : MonoBehaviour
     {
         if (isFineSightMode)
             FineSight();
+    }
+
+    public Gun GetGun()
+    {
+        return currentGun;
+    }
+
+    public bool GetFineSightMode()
+    {
+        return isFineSightMode;
     }
 }

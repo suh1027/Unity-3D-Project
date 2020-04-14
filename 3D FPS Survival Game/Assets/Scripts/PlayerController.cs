@@ -24,6 +24,7 @@ public class PlayerController : MonoBehaviour
     private bool isRun = false;
     private bool isGround = true;
     private bool isCrouch = false;
+    private bool isWalk = false;
 
     // 앉았을때 얼마나 앉을지 결정하는 변수
     [SerializeField]
@@ -45,9 +46,13 @@ public class PlayerController : MonoBehaviour
     private Camera theCamera;
     private Rigidbody myRigid;
     private CapsuleCollider capsuleCollider; //지면과 맞닿아 있을때만 점프가 가능하도록 사용
+    private CrossHair theCrossHair;
 
     [SerializeField]
     private GunController theGunController;
+
+    // 움직임 체크 변수
+    private Vector3 lastPos;
 
     void Start()
     {
@@ -56,7 +61,8 @@ public class PlayerController : MonoBehaviour
         appplySpeed = walkSpeed;
         originPosY = theCamera.transform.localPosition.y; //localPosition -> world기준이 아닌 player기준으로 position값을 받는것
         applyCrouchPosY = originPosY;
-        theGunController = FindObjectOfType<GunController>();
+        theGunController = FindObjectOfType<GunController>(); // FindObjectOfType 하이어라키 전체를 검색해서 type을 찾아 넣어주는 함수
+        theCrossHair = FindObjectOfType<CrossHair>();
     }
 
     void Update()
@@ -70,6 +76,7 @@ public class PlayerController : MonoBehaviour
         // theCamera = FindObjectOfType<Camera>(); 전체검색
 
         Move();
+        MoveCheck();
         CameraRotation();
         CharacterRotation();
     }
@@ -89,6 +96,8 @@ public class PlayerController : MonoBehaviour
     private void Crouch()
     {
         isCrouch = !isCrouch; //true <-> false
+
+        theCrossHair.CrouchingAnimation(isCrouch);
 
         if (isCrouch)
         {
@@ -143,6 +152,7 @@ public class PlayerController : MonoBehaviour
         // capsuleCollider.bounds.extents.y bounds.extents.y => 외부영역의.반사이즈.y값 지면과 딱 닿을 만큼 쏘는것
         // 계단이나 오르막길에서 ray가 바닥에 닿지않는 문제가 발생 약간의 여유를 더 주어야 함 (0.1f)
         isGround = Physics.Raycast(transform.position, Vector3.down, capsuleCollider.bounds.extents.y + 0.1f);
+        theCrossHair.RunningAnimation(!isGround); // 반대로 해주어야 뛰었을때 크로스헤어가 사라지게..
     }
 
     private void TryJump()
@@ -189,6 +199,8 @@ public class PlayerController : MonoBehaviour
 
         isRun = true;
         appplySpeed = runSpeed;
+
+        theCrossHair.RunningAnimation(isRun);
     }
 
     private void RunningCancel()
@@ -196,6 +208,7 @@ public class PlayerController : MonoBehaviour
 
         isRun = false;
         appplySpeed = walkSpeed;
+        theCrossHair.RunningAnimation(isRun);
     }
 
 
@@ -219,7 +232,19 @@ public class PlayerController : MonoBehaviour
 
     }
 
+    private void MoveCheck()
+    {
+        if (!isRun && !isCrouch && isGround) { // 걷고있지 않고 웅크리지 않았을때만 걷는지 아닌지 체크
+            if (Vector3.Distance(lastPos,transform.position) >= 0.01f) // Vector3.Distance(a,b); 두 위치사이의 거리를 반환
+                //lastPos != transform.position -> 경사로에서 살짝 미끌어지는것도 걷는것으로 판단하는 문제 -> 여유를 둠
+                isWalk = true;
+            else
+                isWalk = false;
 
+            theCrossHair.WalkingAnimation(isWalk);
+            lastPos = transform.position;
+        }
+    }
 
 
     // #5. 카메라 관련 함수
