@@ -411,13 +411,13 @@ MonoBehaviour:
   fireRate: 0.1
   reloadTime: 2
   damage: 30
-  reloadBulletCount: 10
-  currentBulletCount: 10
+  reloadBulletCount: 30
+  currentBulletCount: 30
   maxBulletCount: 0
-  carryBulletCount: 23
+  carryBulletCount: 100
   retroActionForce: 0.3
   retroActionFineSightForce: 0.58
-  fineSightOriginPos: {x: 0.06, y: 0.29, z: -0.678}
+  fineSightOriginPos: {x: 0.06, y: 0.33, z: -0.58}
   animator: {fileID: 180789814}
   muzzleFlash: {fileID: 2043752513}
   fire_Sound: {fileID: 8300000, guid: 5ca4a538cb032c94b9151268253bf4a5, type: 3}
@@ -5855,7 +5855,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1063205375
 Transform:
   m_ObjectHideFlags: 0
@@ -6017,6 +6017,7 @@ GameObject:
   - component: {fileID: 1336422700}
   - component: {fileID: 1336422701}
   - component: {fileID: 1336422702}
+  - component: {fileID: 1336422703}
   m_Layer: 2
   m_Name: Holder
   m_TagString: Untagged
@@ -6047,7 +6048,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1336422698}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 44c7cb06fac30a44388ba7d48b926db0, type: 3}
   m_Name: 
@@ -6166,6 +6167,27 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1336422703
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336422698}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05ba2b3ebead25948bafc917d0f2c5c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  currentWeaponType: GUN
+  changeWeaponDelayTime: 0.1
+  changeWeaponEndDelayTime: 0.1
+  guns:
+  - {fileID: 180789813}
+  hands:
+  - {fileID: 5571377175771206308}
+  theGunController: {fileID: 1336422701}
+  theHandController: {fileID: 1336422700}
 --- !u!1 &1478470573
 GameObject:
   m_ObjectHideFlags: 0
@@ -6864,7 +6886,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2043752510}
   m_LocalRotation: {x: -0, y: -0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -3.157, y: 0.45, z: 0.444}
+  m_LocalPosition: {x: -3.157, y: 0.251, z: 0.595}
   m_LocalScale: {x: 0.09999998, y: 0.1, z: 0.09999998}
   m_Children:
   - {fileID: 1032754762}
@@ -11806,6 +11828,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Layer
       value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 2490121900099748838, guid: a38404fe2f4b91b4daec466fe9c51c33,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2490121900099748840, guid: a38404fe2f4b91b4daec466fe9c51c33,
         type: 3}

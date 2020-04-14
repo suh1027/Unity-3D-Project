@@ -152,7 +152,7 @@ public class PlayerController : MonoBehaviour
         // capsuleCollider.bounds.extents.y bounds.extents.y => 외부영역의.반사이즈.y값 지면과 딱 닿을 만큼 쏘는것
         // 계단이나 오르막길에서 ray가 바닥에 닿지않는 문제가 발생 약간의 여유를 더 주어야 함 (0.1f)
         isGround = Physics.Raycast(transform.position, Vector3.down, capsuleCollider.bounds.extents.y + 0.1f);
-        theCrossHair.RunningAnimation(!isGround); // 반대로 해주어야 뛰었을때 크로스헤어가 사라지게..
+        theCrossHair.JumpAnimation(!isGround); // 반대로 해주어야 뛰었을때 크로스헤어가 사라지게..
     }
 
     private void TryJump()
