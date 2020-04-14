@@ -108,8 +108,6 @@ public class GunController : MonoBehaviour
         // 크로스헤어 애니메이션 
         theCrossHair.FireAnimation();
         
-        //Debug.Log("총알 발사함");
-        
         //연사속도 재계산
         currentFireRate = currentGun.fireRate;
 
@@ -123,7 +121,6 @@ public class GunController : MonoBehaviour
         // 3) 탄알집 총알 -1
         currentGun.currentBulletCount--;
 
-        
         Hit(); 
         //오브젝트 풀링을 사용하면 렉이 다운되긴 하지만 그냥 구현
 
