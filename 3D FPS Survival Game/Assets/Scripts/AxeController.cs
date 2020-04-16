@@ -6,7 +6,13 @@ public class AxeController : CloseWeaponController
 {
     // 활성화
     public static bool isActivate = false;
-
+    
+    void Start()
+    {
+        //WeaponManager.currentWeapon = currentCloseWeapon.GetComponent<Transform>();
+        //WeaponManager.currentWeaponAnim = currentCloseWeapon.animator;
+    }
+    
     void Update()
     {
         if (isActivate)

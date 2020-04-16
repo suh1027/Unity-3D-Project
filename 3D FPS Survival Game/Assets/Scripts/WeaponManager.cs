@@ -21,6 +21,7 @@ public class WeaponManager : MonoBehaviour
     [SerializeField]
     private float changeWeaponDelayTime;
     // 무기교체가 완전히 끝난 시점
+
     [SerializeField]
     private float changeWeaponEndDelayTime;
 
@@ -30,16 +31,26 @@ public class WeaponManager : MonoBehaviour
     private Gun[] guns;
     [SerializeField]
     private CloseWeapon[] hands;
+    [SerializeField]
+    private CloseWeapon[] axes; // 관리상 편하기 위해 구분
+    [SerializeField]
+    private CloseWeapon[] pickaxes;
 
     // Key Value 로 관리
     // 관리 차원에서 무기접근이 쉽게 가능하도록 만듬
     private Dictionary<string, Gun> gunDictionary = new Dictionary<string, Gun>();
     private Dictionary<string, CloseWeapon> handDictionary = new Dictionary<string, CloseWeapon>();
+    private Dictionary<string, CloseWeapon> axeDictionary = new Dictionary<string, CloseWeapon>();
+    private Dictionary<string, CloseWeapon> pickaxeDictionary = new Dictionary<string, CloseWeapon>();
 
     [SerializeField]
     private GunController theGunController;
     [SerializeField]
     private HandController theHandController;
+    [SerializeField]
+    private AxeController theAxeController;
+    [SerializeField]
+    private PickAxeController thePickAxeController;
 
     // Start is called before the first frame update
     void Start()
@@ -50,7 +61,15 @@ public class WeaponManager : MonoBehaviour
         }
         for (int i = 0; i < hands.Length; i++)
         {
-            handDictionary.Add(hands[i].handName, hands[i]);
+            handDictionary.Add(hands[i].closeWeaponName, hands[i]);
+        }
+        for (int i = 0; i < axes.Length; i++)
+        {
+            axeDictionary.Add(axes[i].closeWeaponName, axes[i]);
+        }
+        for (int i = 0; i < pickaxes.Length; i++)
+        {
+            pickaxeDictionary.Add(pickaxes[i].closeWeaponName, pickaxes[i]);
         }
     }
 
@@ -69,6 +88,18 @@ public class WeaponManager : MonoBehaviour
             {
                 // 숫자 2를 눌렀을때 구현 -> Coroutine으로 구현
                 StartCoroutine(ChangeWeaponCoroutine("GUN", "SubMachineGun1"));
+            }
+
+            else if (Input.GetKeyDown(KeyCode.Alpha3))
+            {
+                // 숫자 3를 눌렀을때 구현 -> Coroutine으로 구현
+                StartCoroutine(ChangeWeaponCoroutine("AXE", "Axe"));
+            }
+
+            else if (Input.GetKeyDown(KeyCode.Alpha4))
+            {
+                // 숫자 3를 눌렀을때 구현 -> Coroutine으로 구현
+                StartCoroutine(ChangeWeaponCoroutine("PICKAXE", "PickAxe"));
             }
 
         }
@@ -105,6 +136,12 @@ public class WeaponManager : MonoBehaviour
             case "HAND":
                 HandController.isActivate = false;
                 break;
+            case "AXE":
+                AxeController.isActivate = false;
+                break;
+            case "PICKAXE":
+                PickAxeController.isActivate = false;
+                break;
         }
     }
 
@@ -114,6 +151,11 @@ public class WeaponManager : MonoBehaviour
             theGunController.GunChange(gunDictionary[_name]);
         else if(_type == "HAND")
             theHandController.CloseWeaponChange(handDictionary[_name]);
+        else if (_type == "AXE")
+            theAxeController.CloseWeaponChange(axeDictionary[_name]);
+        else if (_type == "PICKAXE")
+            thePickAxeController.CloseWeaponChange(pickaxeDictionary[_name]);
 
+        // pick axe 추가--
     }
 }
