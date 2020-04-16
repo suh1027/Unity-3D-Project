@@ -23,10 +23,17 @@ public class PickAxeController : CloseWeaponController
         {
             if (CheckObject())
             {
+                if(hitInfo.transform.tag == "Rock")
+                {
+                    hitInfo.transform.GetComponent<Rock>().Mining();
+                }
+                
                 // 적중한 것이 있으면 isSwing을 꺼줌
                 isSwing = false;
 
-                // 충돌함
+                
+
+                // 충돌하는지 확인 디버그
                 Debug.Log(hitInfo.transform.name);
             }
 
