@@ -37,9 +37,8 @@ public class GunController : MonoBehaviour
     [SerializeField]
     private GameObject hit_effect_prefab;
 
-   
 
-
+    //뛸때는 shoot()이 안되게 anim 조작을 위해 curruentgun의 애니메이션의 ..
 
     void Start()
     {
@@ -90,7 +89,7 @@ public class GunController : MonoBehaviour
 
     private void Fire() // 방아쇠를 당기고 나서 연사속도 만큼 총알 한발 처리 과정
     {
-        if (!isReload) {
+        if (!isReload && !currentGun.animator.GetBool("Run")) { // 뛰고있을때는 발사가 되게는 하되 애니메이션을 중단시켜야..하는지
             if (currentGun.currentBulletCount > 0)
                 Shoot();
             else 
@@ -98,7 +97,7 @@ public class GunController : MonoBehaviour
                 CancelFineSight(); // 총알이 0 발일때 발사하면 정조준 해제
                 StartCoroutine(ReloadCoroutine());
             }
-                //Reload();
+            //Reload();
                 
     
         }

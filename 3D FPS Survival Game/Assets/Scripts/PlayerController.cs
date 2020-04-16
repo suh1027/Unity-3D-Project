@@ -50,6 +50,7 @@ public class PlayerController : MonoBehaviour
 
     [SerializeField]
     private GunController theGunController;
+    private StatusController theStatusController;
 
     // 움직임 체크 변수
     private Vector3 lastPos;
@@ -63,6 +64,7 @@ public class PlayerController : MonoBehaviour
         applyCrouchPosY = originPosY;
         theGunController = FindObjectOfType<GunController>(); // FindObjectOfType 하이어라키 전체를 검색해서 type을 찾아 넣어주는 함수
         theCrossHair = FindObjectOfType<CrossHair>();
+        theStatusController = FindObjectOfType<StatusController>();
     }
 
     void Update()
@@ -167,7 +169,11 @@ public class PlayerController : MonoBehaviour
     {
         if (isCrouch) // 앉은상태에서 점프시도시 일어서게 만듬
             Crouch();
+
+        theStatusController.DecreaseStamina(100); // 점프시 스테미너 100감소
+
         myRigid.velocity = transform.up * jumpForce;
+
     }
 
 
@@ -195,6 +201,7 @@ public class PlayerController : MonoBehaviour
         if (isCrouch)
             Crouch(); //앉았을때 달리기 시도시에 앉은상태 해제
 
+        theStatusController.DecreaseStamina(1); // 점프시 스테미너 100감소
         theGunController.CancelFineSight();
 
         isRun = true;

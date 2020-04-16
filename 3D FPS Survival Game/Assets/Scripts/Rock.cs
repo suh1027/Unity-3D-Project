@@ -22,19 +22,25 @@ public class Rock : MonoBehaviour
     [SerializeField]
     private GameObject go_effect_prefabs; // 채굴 이펙트 프리팹
 
-    // 소리 구현
+    [SerializeField]
+    private string strike_sound;
+    [SerializeField]
+    private string destroy_sound;
+
+/*    // 소리 구현
     [SerializeField]
     private AudioSource audioSource;
     [SerializeField]
     private AudioClip effectClip; // 이펙트 사운드
     [SerializeField]
-    private AudioClip effectClip2; // 파괴 사운드
+    private AudioClip effectClip2; // 파괴 사운드*/
 
     public void Mining()
     {
         // 소리 구현
-        audioSource.clip = effectClip;
-        audioSource.Play();
+        /*        audioSource.clip = effectClip;
+                audioSource.Play();*/
+        SoundManager.instance.PlaySE(strike_sound);
         
         var clone = Instantiate(go_effect_prefabs, col.bounds.center,Quaternion.identity); //quaternion identity -> 기본회전값
 
@@ -48,8 +54,10 @@ public class Rock : MonoBehaviour
     private void Destruction()
     {
         // 파괴시 사운드 구현
-        audioSource.clip = effectClip2;
-        audioSource.Play();
+        /*        audioSource.clip = effectClip2;
+                audioSource.Play();*/
+
+        SoundManager.instance.PlaySE(destroy_sound);
 
         col.enabled = false; // 비활성화
         Destroy(go_rock);
