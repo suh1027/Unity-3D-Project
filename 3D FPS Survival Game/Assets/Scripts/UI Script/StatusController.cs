@@ -154,4 +154,86 @@ public class StatusController : MonoBehaviour
         }
 
     }
+
+    public int GetCurrentSP()
+    {
+        return currentSP;
+    }
+
+
+    public void IncreaseHP(int _count)
+    {
+        if (currentHP + _count < hp)
+            currentHP += _count;
+        else
+            currentHP = hp;
+    }
+
+    public void DecreaseHP(int _count)
+    {
+        if (currentDp > 0) //방어력이 0 이하일때만 체력이 달도록 설정
+        {
+            DecreaseDP(_count);
+            return;
+        }
+        
+        currentHP -= _count;
+        
+        if(currentHP <= 0)
+        {
+            Debug.Log("캐릭터의 hp가 0이 되었습니다.");
+        }
+    }
+
+    public void IncreaseDP(int _count)
+    {
+        if (currentDp + _count < dp)
+            currentDp += _count;
+        else
+            currentDp = dp;
+    }
+
+    public void DecreaseDP(int _count)
+    {
+        currentDp -= _count;
+        if (currentDp <= 0)
+        {
+            Debug.Log("캐릭터의 방어력이 0이 되었습니다.");
+        }
+    }
+
+    public void IncreaseHungry(int _count)
+    {
+        if (currentHungry + _count < hungry)
+            currentHungry += _count;
+        else
+            currentHungry = hungry;
+    }
+
+    public void DecreaseHungry(int _count)
+    {
+        if (currentHungry - -_count < 0)
+            currentHungry = 0;
+            //Debug.Log("캐릭터의 배고픔이 0이 되었습니다.");
+        else
+            currentHungry -= _count;
+        
+    }
+    public void IncreaseThirsty(int _count)
+    {
+        if (currentThirsty + _count < thirsty)
+            currentThirsty += _count;
+        else
+            currentThirsty = thirsty;
+    }
+
+    public void DecreaseThirsty(int _count)
+    {
+        if (currentThirsty - -_count < 0)
+            currentThirsty = 0;
+        //Debug.Log("캐릭터의 목마름이 0이 되었습니다.");
+        else
+            currentHungry -= _count;
+
+    }
 }
