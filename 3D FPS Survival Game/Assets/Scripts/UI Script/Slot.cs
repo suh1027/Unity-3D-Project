@@ -21,12 +21,15 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler,
     [SerializeField]
     private GameObject go_Count_Image; // 파란색 원
 
-    private WeaponManager theWeaponManager;
+    private ItemEffectDataBase theItemEffectDataBase;
+
+    //private WeaponManager theWeaponManager;
 
     private void Start()
     {
         //originPos = transform.position;
-        theWeaponManager = FindObjectOfType<WeaponManager>();
+        //theWeaponManager = FindObjectOfType<WeaponManager>(); //->ItemEffeectDatabase로 이동
+        theItemEffectDataBase = FindObjectOfType<ItemEffectDataBase>();
     }
 
     // alpha값 변경 메소드 구현 slot 이미지 투명도 조절
@@ -86,17 +89,15 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler,
         {
             if(item != null)
             {
-                if(item.itemType == Item.ItemType.Equipment)
+                // 소모 아이템 사용 -> 포션 & 재료 아이템 구분 필요
+                theItemEffectDataBase.UsedItem(item);
+
+                if(item.itemType == Item.ItemType.Used)
                 {
-                    // 장착
-                    StartCoroutine(theWeaponManager.ChangeWeaponCoroutine(item.weaponType, item.itemName));
-                }
-                else
-                {
-                    // 소모
-                    Debug.Log(item.itemName + " 을 사용했습니다.");
+                    //Debug.Log(item.itemName + " 을 사용했습니다.");     
                     SetSlotCount(-1);
                 }
+                        
             }
         }
     }

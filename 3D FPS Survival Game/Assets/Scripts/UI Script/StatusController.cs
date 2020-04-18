@@ -28,7 +28,7 @@ public class StatusController : MonoBehaviour
     // #3. 방어력
     [SerializeField]
     private int dp;
-    private int currentDp;
+    private int currentDP;
 
     // #4. 배고픔
     [SerializeField]
@@ -62,7 +62,7 @@ public class StatusController : MonoBehaviour
     void Start()
     {
         currentHP = hp;
-        currentDp = dp;
+        currentDP = dp;
         currentSP = sp;
         currentThirsty = thirsty;
         currentHungry = hungry;
@@ -118,7 +118,7 @@ public class StatusController : MonoBehaviour
     {
         images_Gauge[HP].fillAmount = (float) currentHP / hp;  //최대체력에서 현 체력을 나누어 백분율로 표현(fillAmount)
         images_Gauge[SP].fillAmount = (float)currentSP / sp;
-        images_Gauge[DP].fillAmount = (float)currentDp / dp;
+        images_Gauge[DP].fillAmount = (float)currentDP / dp;
         images_Gauge[HUNGRY].fillAmount = (float)currentHungry / hungry;
         images_Gauge[THIRSTY].fillAmount = (float)currentThirsty / thirsty;
         images_Gauge[SATISFY].fillAmount = (float)currentSatisfy / satisfy;
@@ -168,10 +168,17 @@ public class StatusController : MonoBehaviour
         else
             currentHP = hp;
     }
+    public void IncreaseSP(int _count)
+    {
+        if (currentSP + _count < sp)
+            currentSP += _count;
+        else
+            currentSP = sp;
+    }
 
     public void DecreaseHP(int _count)
     {
-        if (currentDp > 0) //방어력이 0 이하일때만 체력이 달도록 설정
+        if (currentDP > 0) //방어력이 0 이하일때만 체력이 달도록 설정
         {
             DecreaseDP(_count);
             return;
@@ -187,16 +194,16 @@ public class StatusController : MonoBehaviour
 
     public void IncreaseDP(int _count)
     {
-        if (currentDp + _count < dp)
-            currentDp += _count;
+        if (currentDP + _count < dp)
+            currentDP += _count;
         else
-            currentDp = dp;
+            currentDP = dp;
     }
 
     public void DecreaseDP(int _count)
     {
-        currentDp -= _count;
-        if (currentDp <= 0)
+        currentDP -= _count;
+        if (currentDP <= 0)
         {
             Debug.Log("캐릭터의 방어력이 0이 되었습니다.");
         }
