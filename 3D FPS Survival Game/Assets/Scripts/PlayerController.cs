@@ -79,8 +79,12 @@ public class PlayerController : MonoBehaviour
 
         Move();
         MoveCheck();
-        CameraRotation();
-        CharacterRotation();
+
+        if (!Inventory.inventoryActivated)
+        {
+            CameraRotation();
+            CharacterRotation();
+        }
     }
 
     // #1. 앉기 관련 함수

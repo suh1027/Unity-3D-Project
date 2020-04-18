@@ -56,7 +56,7 @@ public class ActionController : MonoBehaviour
         pickUpActivated = true;
         actionText.gameObject.SetActive(true);
         actionText.text = hitInfo.transform.GetComponent<ItemPickUp>().item.itemName 
-            + " 획득" + "<color = yellow>" + "(E)" + "</color>";
+            + " 획득 " + " (E) " ;
     }
 
     private void InfoDisappear()
