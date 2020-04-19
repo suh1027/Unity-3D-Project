@@ -160,7 +160,7 @@ public class Pig : MonoBehaviour
         Debug.Log("걷기");
     }
 
-    private void Run(Vector3 _targetPos)
+    public void Run(Vector3 _targetPos)
     {
         // 맞았을때, 위협이 되는 대상 반대로 뛰도록 만듬
 
