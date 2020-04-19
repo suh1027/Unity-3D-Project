@@ -27,6 +27,13 @@ public class PickAxeController : CloseWeaponController
                 {
                     hitInfo.transform.GetComponent<Rock>().Mining();
                 }
+
+                else if(hitInfo.transform.tag == "NPC")
+                {
+                    SoundManager.instance.PlaySE("AnimalHit");
+                    hitInfo.transform.GetComponent<Pig>().Damage(1, transform.position); 
+                    // pig -> Animal로 만들어 pig를 상속받게 만들어서 일반화 !
+                }
                 
                 // 적중한 것이 있으면 isSwing을 꺼줌
                 isSwing = false;

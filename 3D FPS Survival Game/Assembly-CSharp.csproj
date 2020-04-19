@@ -75,6 +75,7 @@
     <Compile Include="Assets\Scripts\Item.cs" />
     <Compile Include="Assets\Scripts\ItemEffectDataBase.cs" />
     <Compile Include="Assets\Scripts\ItemPickUp.cs" />
+    <Compile Include="Assets\Scripts\NPC\Pig.cs" />
     <Compile Include="Assets\Scripts\PickAxeController.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Rock.cs" />
