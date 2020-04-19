@@ -12,6 +12,9 @@ public class Item : ScriptableObject
     public Sprite itemImage; // 아이템 이미지 (인벤토리에서)
     public GameObject itemPrefab; // 아이템의 프리팹
 
+    [TextArea] // 다음줄로 이동 가능하게 설정
+    public string itemDesc; // 아이템 설명
+
     public string weaponType; // 무기 유형.
 
     public enum ItemType // 아이템 타입 열거형 변수

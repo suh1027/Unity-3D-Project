@@ -6,7 +6,8 @@ using UnityEngine.EventSystems; // 클릭 처리를 위해
 
 //클래스는 다중상속이 불가능 하다 but 인터페이스는 다중상속이 가능하다
 public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler, 
-    IDragHandler, IEndDragHandler, IDropHandler // 클릭을 담당하는 인터페이스 , 드래그 담당
+    IDragHandler, IEndDragHandler, IDropHandler , IPointerEnterHandler, IPointerExitHandler// 클릭을 담당하는 인터페이스 , 드래그 담당
+                                                                      // IPointerEnterHandler ,ExitHandler...-> 슬롯에 포인터가 있는지 감지하는 핸들러
 {
 
     //private Vector3 originPos;
@@ -21,6 +22,7 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler,
     [SerializeField]
     private GameObject go_Count_Image; // 파란색 원
 
+    
     private ItemEffectDataBase theItemEffectDataBase;
 
     //private WeaponManager theWeaponManager;
@@ -158,5 +160,16 @@ public class Slot : MonoBehaviour, IPointerClickHandler, IBeginDragHandler,
         {
             DragSlot.instansce.dragSlot.ClearSlot();
         }
+    }
+
+    public void OnPointerEnter(PointerEventData eventData) // 마우스가 슬롯에 들어갈때 발동
+    {
+        if(item != null)
+            theItemEffectDataBase.ShowToolTip(item,transform.position);
+    }
+
+    public void OnPointerExit(PointerEventData eventData) // 마우스가 슬롯에 빠져나갈때 발동
+    {
+        theItemEffectDataBase.HideToolTip();
     }
 }
