@@ -37,6 +37,9 @@ public class GunController : MonoBehaviour
     [SerializeField]
     private GameObject hit_effect_prefab;
 
+    [SerializeField]
+    private LayerMask theLayerMask;
+
 
     //뛸때는 shoot()이 안되게 anim 조작을 위해 curruentgun의 애니메이션의 ..
 
@@ -138,7 +141,8 @@ public class GunController : MonoBehaviour
             Random.Range(-theCrossHair.GetAccuracy() - currentGun.accuracy, theCrossHair.GetAccuracy() - currentGun.accuracy), // Random.Range를 통해 반동 구현
             0), // 랜덤하게 수치 변화 
             out hitInfo, 
-            currentGun.range))
+            currentGun.range,
+            theLayerMask))
         {
             //Debug.Log(hitInfo.transform.name);
             //Quaternion.LookRotation(hitInfo.normal) -> 위를 바라보는 곳으로 생성

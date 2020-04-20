@@ -10759,6 +10759,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCloseWeapon: {fileID: 5571377175771206308}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1587
 --- !u!114 &1336422701
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10776,6 +10779,9 @@ MonoBehaviour:
   theCam: {fileID: 1848164624}
   hit_effect_prefab: {fileID: 596947459247065156, guid: a761f24328897c2469627fc129203ee8,
     type: 3}
+  theLayerMask:
+    serializedVersion: 2
+    m_Bits: 1587
 --- !u!82 &1336422702
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10928,6 +10934,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCloseWeapon: {fileID: 1003096522}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1587
 --- !u!114 &1336422706
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10941,6 +10950,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentCloseWeapon: {fileID: 4282295972522040022}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 1587
 --- !u!1 &1353443142
 GameObject:
   m_ObjectHideFlags: 0
@@ -11831,7 +11843,7 @@ GameObject:
   - component: {fileID: 1505004019}
   m_Layer: 0
   m_Name: Pig
-  m_TagString: NPC
+  m_TagString: WeekAnimal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11896,18 +11908,19 @@ MonoBehaviour:
   hp: 2
   walkSpeed: 1
   runSpeed: 4
+  turningSpeed: 0.01
   walkTime: 5
   waitTime: 4
   runTime: 3
   anim: {fileID: 1627385247}
   rigid: {fileID: 1505004015}
   boxCol: {fileID: 1505004014}
-  sound_pig_normal:
+  sound_animal_normal:
   - {fileID: 8300000, guid: b494bacb1f6821f44b565d7807ff341f, type: 3}
   - {fileID: 8300000, guid: 4ed8426c3079e2f40b662b1f55ed527a, type: 3}
   - {fileID: 8300000, guid: 292a46227b14aed429d0a63c84a30c23, type: 3}
-  sound_ping_hurt: {fileID: 8300000, guid: f2063feca10c76f4ab253f96658902d6, type: 3}
-  sound_pig_dead: {fileID: 8300000, guid: c41c472b9fc4e3a4a86e43486b1ed5ce, type: 3}
+  sound_animal_hurt: {fileID: 8300000, guid: f2063feca10c76f4ab253f96658902d6, type: 3}
+  sound_animal_dead: {fileID: 8300000, guid: c41c472b9fc4e3a4a86e43486b1ed5ce, type: 3}
 --- !u!82 &1505004018
 AudioSource:
   m_ObjectHideFlags: 0

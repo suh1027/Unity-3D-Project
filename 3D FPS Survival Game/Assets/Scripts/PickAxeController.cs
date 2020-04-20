@@ -28,13 +28,20 @@ public class PickAxeController : CloseWeaponController
                     hitInfo.transform.GetComponent<Rock>().Mining();
                 }
 
-                else if(hitInfo.transform.tag == "NPC")
+                else if(hitInfo.transform.tag == "WeekAnimal")
                 {
                     SoundManager.instance.PlaySE("AnimalHit");
-                    hitInfo.transform.GetComponent<Pig>().Damage(1, transform.position); 
-                    // pig -> Animal로 만들어 pig를 상속받게 만들어서 일반화 !
+                    hitInfo.transform.GetComponent<WeekAnimal>().Damage(1, transform.position); 
+                    // pig -> Animal로 만들어 pig를 상속받게 만들어서 일반화 ! -> WeekAnimal로!(비선공)
                 }
-                
+
+                /*else if (hitInfo.transform.tag == "StrongAnimal")
+                {
+                    SoundManager.instance.PlaySE("AnimalHit");
+                    hitInfo.transform.GetComponent<StrongAnimal>().Damage(1, transform.position);
+                }*/ // 선공몬스터 구현시 이런식으로 구현 가능(StrongAnimal 스크립트 구현 후)
+                // 상속으로 구현해 효용성 Up
+
                 // 적중한 것이 있으면 isSwing을 꺼줌
                 isSwing = false;
 
