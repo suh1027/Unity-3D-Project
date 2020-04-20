@@ -83,6 +83,7 @@
     <Compile Include="Assets\Scripts\PlayerController.cs" />
     <Compile Include="Assets\Scripts\Rock.cs" />
     <Compile Include="Assets\Scripts\SoundManager.cs" />
+    <Compile Include="Assets\Scripts\UI Script\CraftManual.cs" />
     <Compile Include="Assets\Scripts\UI Script\DragSlot.cs" />
     <Compile Include="Assets\Scripts\UI Script\Inventory.cs" />
     <Compile Include="Assets\Scripts\UI Script\Slot.cs" />
