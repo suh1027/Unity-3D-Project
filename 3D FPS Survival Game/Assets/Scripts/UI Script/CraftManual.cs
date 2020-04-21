@@ -53,7 +53,9 @@ public class CraftManual : MonoBehaviour
         }
 
         if (isPreviewActivated)
+        {
             PreviewPositionUpdate();
+        }
 
         if (Input.GetButtonDown("Fire1"))
         {
@@ -69,8 +71,11 @@ public class CraftManual : MonoBehaviour
 
     private void Build()
     {
-        if (isPreviewActivated)
+        //GameManager.isCraftManual = false;
+
+        if (isPreviewActivated && go_Preview.GetComponent<PreviewObject>().isBuildable())
         {
+            
             Instantiate(go_Prefab, hitInfo.point, Quaternion.identity);
             Destroy(go_Preview);
             isActivated = false;
@@ -83,6 +88,7 @@ public class CraftManual : MonoBehaviour
 
     private void PreviewPositionUpdate()
     {
+        GameManager.isCraftManual = false;
         if (Physics.Raycast(tf_Player.position, tf_Player.forward, out hitInfo, range , layerMask))
         {
             if (hitInfo.transform != null) 
@@ -94,7 +100,9 @@ public class CraftManual : MonoBehaviour
     }
     private void Cancel()
     {
-        if(isPreviewActivated)
+        GameManager.isCraftManual = false;
+
+        if (isPreviewActivated)
             Destroy(go_Preview);
 
         isActivated = false;
@@ -116,12 +124,14 @@ public class CraftManual : MonoBehaviour
     private void OpenWindow()
     {
         isActivated = true;
+        GameManager.isCraftManual = true;
         go_Base_UI.SetActive(true);
     }
 
     private void CloseWindow()
     {
         isActivated = false;
+        GameManager.isCraftManual = false;
         go_Base_UI.SetActive(false);
     }
 

@@ -65,9 +65,11 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\ActionController.cs" />
     <Compile Include="Assets\Scripts\AxeController.cs" />
+    <Compile Include="Assets\Scripts\Build\SimpleTrap.cs" />
     <Compile Include="Assets\Scripts\CloseWeapon.cs" />
     <Compile Include="Assets\Scripts\CloseWeaponController.cs" />
     <Compile Include="Assets\Scripts\CrossHair.cs" />
+    <Compile Include="Assets\Scripts\DayAndNight.cs" />
     <Compile Include="Assets\Scripts\Gun.cs" />
     <Compile Include="Assets\Scripts\GunController.cs" />
     <Compile Include="Assets\Scripts\HUD.cs" />
@@ -77,6 +79,7 @@
     <Compile Include="Assets\Scripts\ItemPickUp.cs" />
     <Compile Include="Assets\Scripts\NPC\Animal.cs" />
     <Compile Include="Assets\Scripts\NPC\FieldOfViewAngle.cs" />
+    <Compile Include="Assets\Scripts\NPC\GameManager.cs" />
     <Compile Include="Assets\Scripts\NPC\Pig.cs" />
     <Compile Include="Assets\Scripts\NPC\WeekAnimal.cs" />
     <Compile Include="Assets\Scripts\PickAxeController.cs" />
@@ -86,6 +89,7 @@
     <Compile Include="Assets\Scripts\UI Script\CraftManual.cs" />
     <Compile Include="Assets\Scripts\UI Script\DragSlot.cs" />
     <Compile Include="Assets\Scripts\UI Script\Inventory.cs" />
+    <Compile Include="Assets\Scripts\UI Script\PreviewObject.cs" />
     <Compile Include="Assets\Scripts\UI Script\Slot.cs" />
     <Compile Include="Assets\Scripts\UI Script\SlotToolTip.cs" />
     <Compile Include="Assets\Scripts\UI Script\StatusController.cs" />

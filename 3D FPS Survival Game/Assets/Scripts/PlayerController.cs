@@ -69,22 +69,22 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        IsGround();
-        TryJump();
-
-        TryRun();
-
-        TryCrounch();
-        // theCamera = FindObjectOfType<Camera>(); 전체검색
-
-        Move();
-        MoveCheck();
-
-        if (!Inventory.inventoryActivated)
+        if (GameManager.canPlayerMove)
         {
+            IsGround();
+            TryJump();
+            TryRun();
+            TryCrounch();
+            // theCamera = FindObjectOfType<Camera>(); 전체검색
+
+            Move();
+            MoveCheck();
+            
             CameraRotation();
             CharacterRotation();
+
         }
+        
     }
 
     // #1. 앉기 관련 함수
