@@ -89,6 +89,7 @@
     <Compile Include="Assets\Scripts\UI Script\CraftManual.cs" />
     <Compile Include="Assets\Scripts\UI Script\DragSlot.cs" />
     <Compile Include="Assets\Scripts\UI Script\Inventory.cs" />
+    <Compile Include="Assets\Scripts\UI Script\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\UI Script\PreviewObject.cs" />
     <Compile Include="Assets\Scripts\UI Script\Slot.cs" />
     <Compile Include="Assets\Scripts\UI Script\SlotToolTip.cs" />
