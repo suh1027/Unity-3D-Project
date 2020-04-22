@@ -94,6 +94,7 @@
     <Compile Include="Assets\Scripts\UI Script\Slot.cs" />
     <Compile Include="Assets\Scripts\UI Script\SlotToolTip.cs" />
     <Compile Include="Assets\Scripts\UI Script\StatusController.cs" />
+    <Compile Include="Assets\Scripts\UI Script\Title.cs" />
     <Compile Include="Assets\Scripts\UI Script\Water.cs" />
     <Compile Include="Assets\Scripts\WeaponManager.cs" />
     <Compile Include="Assets\Scripts\WeaponSway.cs" />
