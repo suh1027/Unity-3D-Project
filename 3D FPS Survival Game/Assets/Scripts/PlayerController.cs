@@ -12,6 +12,14 @@ public class PlayerController : MonoBehaviour
     private float runSpeed;
     private float appplySpeed;
 
+    // Swim
+    [SerializeField]
+    private float swimSpeed;
+    [SerializeField]
+    private float swimFastSpeed; // shift 
+    [SerializeField]
+    private float upSwimSpeed;
+
     // 점프
     [SerializeField]
     private float jumpForce;
@@ -71,9 +79,11 @@ public class PlayerController : MonoBehaviour
     {
         if (GameManager.canPlayerMove)
         {
+            WaterCheck();
             IsGround();
             TryJump();
-            TryRun();
+            if (!GameManager.isWater) 
+                TryRun();
             TryCrounch();
             // theCamera = FindObjectOfType<Camera>(); 전체검색
 
@@ -82,9 +92,24 @@ public class PlayerController : MonoBehaviour
             
             CameraRotation();
             CharacterRotation();
-
+            //Debug.Log(GameManager.isWater);
         }
         
+    }
+
+    private void WaterCheck()
+    {
+        if (GameManager.isWater)
+        {
+            if (Input.GetKeyDown(KeyCode.LeftShift))
+            {
+                appplySpeed = swimFastSpeed;
+            }
+            else
+            {
+                appplySpeed = swimSpeed;
+            }
+        }
     }
 
     // #1. 앉기 관련 함수
@@ -167,6 +192,16 @@ public class PlayerController : MonoBehaviour
         {
             Jump();
         }
+        else if(Input.GetKey(KeyCode.Space) && GameManager.isWater) // 수중에서 space 눌렀을때
+        {
+            Debug.Log("UpSwim");
+            UpSwim();
+        }
+    }
+
+    private void UpSwim()
+    {
+        myRigid.velocity = transform.up * upSwimSpeed;
     }
 
     private void Jump()

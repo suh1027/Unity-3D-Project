@@ -4,10 +4,11 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Water
-  m_Shader: {fileID: 4800000, guid: 6609af8ba52620e449222cfabd7a554c, type: 3}
+  m_Shader: {fileID: 4800000, guid: b729a31096efa3e489a79be7ea2b5d95, type: 3}
   m_ShaderKeywords: _NORMALMAP
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -55,7 +56,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _node_661:
-        m_Texture: {fileID: 2800000, guid: 2f229460306ea994bab050d939f2a4fa, type: 3}
+        m_Texture: {fileID: 2800000, guid: ff17ae82554867d40b8272db06ad3352, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:

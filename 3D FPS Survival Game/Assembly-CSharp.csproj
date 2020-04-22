@@ -93,8 +93,10 @@
     <Compile Include="Assets\Scripts\UI Script\Slot.cs" />
     <Compile Include="Assets\Scripts\UI Script\SlotToolTip.cs" />
     <Compile Include="Assets\Scripts\UI Script\StatusController.cs" />
+    <Compile Include="Assets\Scripts\UI Script\Water.cs" />
     <Compile Include="Assets\Scripts\WeaponManager.cs" />
     <Compile Include="Assets\Scripts\WeaponSway.cs" />
+    <None Include="Assets\Samples\Terrain Tools\0.1.0-preview\Terrain Assets\ThirdPartyNotices.txt" />
     <None Include="Assets\Water Shader\Water_Shader.shader" />
     <Reference Include="Unity.Timeline.Editor">
       <HintPath>C:/Users/서지훈/Documents/Programming Files/UnityProgramming/3D Project/Unity-3D-Project/3D FPS Survival Game/Library/ScriptAssemblies/Unity.Timeline.Editor.dll</HintPath>

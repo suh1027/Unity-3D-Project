@@ -9,10 +9,18 @@ public class GameManager : MonoBehaviour
     public static bool isOpenInventory = false; // 인벤토리 활성화
     public static bool isCraftManual = false; // 건축 메뉴창 활성화
 
+    public static bool isNight = false;
+    public static bool isWater = false;
+
+
+    private WeaponManager theWeaponManager;
+    private bool flag = false; // 물에서 계속 실행되지 않게 하기위해
+
     private void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
+        theWeaponManager = FindObjectOfType<WeaponManager>();
     }
 
     
@@ -30,6 +38,24 @@ public class GameManager : MonoBehaviour
 
             Cursor.lockState = CursorLockMode.Locked;
             Cursor.visible = false;
+        }
+
+        if (isWater)
+        {
+            if (!flag)
+            {
+                StopAllCoroutines(); // 코루틴 중복실행을 막음
+                flag = true;
+                StartCoroutine(theWeaponManager.WeaponInCoroutine());
+            }
+        }
+        else
+        {
+            if (flag)
+            {
+                flag = false;
+                theWeaponManager.WeaponOut();
+            }
         }
     }
 

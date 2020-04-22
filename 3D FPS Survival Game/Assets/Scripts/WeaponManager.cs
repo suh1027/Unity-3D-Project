@@ -158,4 +158,24 @@ public class WeaponManager : MonoBehaviour
 
         // pick axe 추가--
     }
+
+    // 물에서 무기를 집어넣는 함수
+    public IEnumerator WeaponInCoroutine()
+    {
+        isChangeWeapon = true;
+        currentWeaponAnim.SetTrigger("Weapon_Out");
+
+        yield return new WaitForSeconds(changeWeaponDelayTime);
+
+        currentWeapon.gameObject.SetActive(false);
+    }
+
+    //물에서 나올때
+
+    public void WeaponOut()
+    {
+        isChangeWeapon = false;
+
+        currentWeapon.gameObject.SetActive(true);
+    }
 }
