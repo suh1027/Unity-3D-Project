@@ -1792,6 +1792,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   go_BaseUI: {fileID: 481712999}
+  theSaveAndLoad: {fileID: 1438162203}
 --- !u!1 &292460866
 GameObject:
   m_ObjectHideFlags: 0
@@ -13850,6 +13851,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1438162201}
   - component: {fileID: 1438162202}
+  - component: {fileID: 1438162203}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -13881,6 +13883,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: df2a40c56dafd5743bb77e2cd4ef23cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1438162203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1438162200}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ec9f76726806f0d478d3a0303b4a85dc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1461104198
@@ -23184,6 +23198,10 @@ MonoBehaviour:
   - {fileID: 667453145}
   - {fileID: 1387741803}
   - {fileID: 299777390}
+  items:
+  - {fileID: 11400000, guid: 8680c804b99a1324d951a9ed80eceaca, type: 2}
+  - {fileID: 11400000, guid: e664048a6f41ffb4bbcfb833a9c96119, type: 2}
+  - {fileID: 11400000, guid: 400eb8adc73bc1a4abd34632133275b3, type: 2}
 --- !u!1 &2134180809 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: f8ddef84425b45b4f95af7ff2dcc21c7,

@@ -14,8 +14,22 @@ public class Inventory : MonoBehaviour
     private GameObject go_SlotsParent; // grid setting
 
     // 슬롯들
-    [SerializeField]
-    private Slot[] slots;
+    [SerializeField] private Slot[] slots; //인벤토리 슬롯들
+
+    public Slot[] GetSlots() { return slots;}
+
+    [SerializeField] private Item[] items;
+
+    public void LoadToInven(int _arrayNum, string _itemName, int _itemNum)
+    {
+        for (int i = 0; i < items.Length; i++)
+        {
+            if(items[i].itemName == _itemName)
+            {
+                slots[_arrayNum].AddItem(items[i], _itemNum);
+            }
+        }
+    }
 
     void Start()
     {
@@ -72,7 +86,7 @@ public class Inventory : MonoBehaviour
         {
             if (slots[i].item == null)
             {
-                slots[i].AddItem(_item, _count);
+                slots[i].AddItem(_item, _count); // 아이템을 넣는과정
                 return;
             }
         }

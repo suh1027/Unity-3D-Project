@@ -5,6 +5,7 @@ using UnityEngine;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject go_BaseUI;
+    [SerializeField] private SaveAndLoad theSaveAndLoad;
 
     private void Update()
     {
@@ -40,11 +41,13 @@ public class PauseMenu : MonoBehaviour
     public void ClickSave() // 저장
     {
         Debug.Log("저장");
+        theSaveAndLoad.SaveData();
     }
 
     public void ClickLoad() // 로딩
     {
         Debug.Log("로드");
+        theSaveAndLoad.LoadData();
     }
 
     public void ClickExit() // 종료
